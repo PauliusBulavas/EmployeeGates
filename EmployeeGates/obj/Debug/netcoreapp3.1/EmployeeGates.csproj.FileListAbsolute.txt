@@ -1,0 +1,14 @@
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\bin\Debug\netcoreapp3.1\EmployeeGates.exe
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\bin\Debug\netcoreapp3.1\EmployeeGates.deps.json
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\bin\Debug\netcoreapp3.1\EmployeeGates.runtimeconfig.json
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\bin\Debug\netcoreapp3.1\EmployeeGates.runtimeconfig.dev.json
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\bin\Debug\netcoreapp3.1\EmployeeGates.dll
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\bin\Debug\netcoreapp3.1\EmployeeGates.pdb
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.csproj.AssemblyReference.cache
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.AssemblyInfoInputs.cache
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.AssemblyInfo.cs
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.csproj.CoreCompileInputs.cache
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.dll
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.pdb
+C:\Users\pauli\Documents\GitHub\EmployeeGates\EmployeeGates\obj\Debug\netcoreapp3.1\EmployeeGates.genruntimeconfig.cache

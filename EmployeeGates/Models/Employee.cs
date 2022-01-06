@@ -9,23 +9,20 @@ namespace EmployeeGates.Models
         public int      EmployeeId          { get; set; }
         public string   Name                { get; set; }
         public int      GateId              { get; set; }
-        public int      LunchAmmount        { get; set; }
-        public int      SmokeAmmount        { get; set; }
-        public int      ToiletAmmount       { get; set; }
+
 
         public Employee()
         {
 
         }
 
-        public Employee(int employeeId, string name, int gateId, int lunchAmmount, int smokeAmmount, int toiletAmmount)
+
+        public Employee(int employeeId, string name, int gateId)
         {
             EmployeeId      = employeeId;
             Name            = name;
             GateId          = gateId;
-            LunchAmmount    = lunchAmmount;
-            SmokeAmmount    = smokeAmmount;
-            ToiletAmmount   = toiletAmmount;
+
         }
     }
 }

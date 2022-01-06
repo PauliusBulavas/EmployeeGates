@@ -6,7 +6,7 @@ namespace EmployeeGates.Models
 {
     public class Gates
     {
-        public int      Id      { get; set; }
+        public int      Id          { get; set; }
         public string   GateName    { get; set; }
         public Gates()
         {

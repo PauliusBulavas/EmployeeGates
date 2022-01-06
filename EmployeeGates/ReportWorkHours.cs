@@ -28,7 +28,9 @@ namespace EmployeeGates
             {
                 var reportItemWorkHours = new ReportItemWorkHours();
 
-                TimeSpan lunchTime = EventRepository.GetEvent("Lunch Break");
+                TimeSpan lunchTime  = _eventRepository.GetEventTime(1);
+                TimeSpan smokeTime  = _eventRepository.GetEventTime(2);
+                TimeSpan toiletTime = _eventRepository.GetEventTime(3);
 
                 TimeSpan workTime = new TimeSpan(9, 0, 0);
                 reportItemWorkHours.Name = employee.Name;

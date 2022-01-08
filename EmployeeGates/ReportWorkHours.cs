@@ -25,7 +25,6 @@ namespace EmployeeGates
             var reportAllPasses = new ReportAllPasses(_gatesRepository, _employeeRepository, _eventRepository);
 
             List<Employee> employees = _employeeRepository.GetEmployees();
-            List<ReportItemPasses> allPasses = reportAllPasses.GetAllPasses();
             List<ReportItemWorkHours> workHours = new List<ReportItemWorkHours>();
 
 

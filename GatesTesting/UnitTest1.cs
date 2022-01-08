@@ -1,18 +1,17 @@
+using EmployeeGates.Repositories;
 using NUnit.Framework;
 
 namespace GatesTesting
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void GetEventById()
         {
-            Assert.Pass();
+            var eventRepository = new EventRepository();
+            
+            
+
         }
     }
 }

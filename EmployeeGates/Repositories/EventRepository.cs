@@ -28,7 +28,7 @@ namespace EmployeeGates.Repositories
         public int LunchAmmount()
         {
             var random = new Random();
-            int lunchBreakAmmount = random.Next(0, 2);
+            int lunchBreakAmmount = random.Next(1, 2);
 
             return lunchBreakAmmount;
         }
@@ -42,7 +42,7 @@ namespace EmployeeGates.Repositories
         public int ToiletAmmount()
         {
             var random = new Random();
-            int toiletBreakAmmount = random.Next(0, 4);
+            int toiletBreakAmmount = random.Next(1, 4);
 
             return toiletBreakAmmount;
         }

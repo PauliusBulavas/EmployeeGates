@@ -2,7 +2,7 @@
 using EmployeeGates.ReportItem;
 using EmployeeGates.Repositories;
 using System.Collections.Generic;
-
+using System.Linq;
 
 namespace EmployeeGates
 {
@@ -27,11 +27,17 @@ namespace EmployeeGates
 
             foreach (var employee in employees)
             {
-                var reportItemPasses    = new ReportItemPasses();
-                int ammountOfBreaks     = _eventRepository.SmokeAmmount() + _eventRepository.ToiletAmmount() + _eventRepository.LunchAmmount();
+                var reportItemPasses        = new ReportItemPasses();
+                int ammountSmokeBreaks      = _eventRepository.SmokeAmmount();
+                int ammountOfLunchBreaks    = _eventRepository.LunchAmmount();
+                int ammountOfToiletBreaks   = _eventRepository.ToiletAmmount();
 
-                reportItemPasses.AmmountOfPasses    = 2 + (ammountOfBreaks * 2);  //    start/end of day plus breaks
-                reportItemPasses.Name               = employee.Name;
+                reportItemPasses.AmmountOfSmokeBreaks   = ammountSmokeBreaks;
+                reportItemPasses.AmmountOfToiletBreaks  = ammountOfToiletBreaks;
+                reportItemPasses.AmmountOfLunchBreaks   = ammountOfLunchBreaks;
+                reportItemPasses.AmmountOfPasses        = 2 + (ammountOfLunchBreaks * 2) + (ammountSmokeBreaks * 2) + (ammountOfToiletBreaks * 2);
+                
+                reportItemPasses.Name = employee.Name;
 
                 Gates gates = _gatesRepository.GetOneGate(employee.GateId);
                 reportItemPasses.NameOfGates = gates.GateName;

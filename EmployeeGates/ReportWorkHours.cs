@@ -11,16 +11,21 @@ namespace EmployeeGates
     {
         private EventRepository     _eventRepository = new EventRepository();
         private EmployeeRepository  _employeeRepository;
+        private GatesRepository     _gatesRepository;
 
-        public ReportWorkHours(EventRepository eventRepository, EmployeeRepository employeeRepository)
+        public ReportWorkHours(EventRepository eventRepository, EmployeeRepository employeeRepository, GatesRepository gatesRepository)
         {
-            _eventRepository    = eventRepository;
-            _employeeRepository = employeeRepository;
+            _eventRepository        = eventRepository;
+            _employeeRepository     = employeeRepository;
+            _gatesRepository        = gatesRepository;
         }
 
         public List<ReportItemWorkHours> GetAllWorkHours()
         {
+            var reportAllPasses = new ReportAllPasses(_gatesRepository, _employeeRepository, _eventRepository);
+
             List<Employee> employees = _employeeRepository.GetEmployees();
+            List<ReportItemPasses> allPasses = reportAllPasses.GetAllPasses();
             List<ReportItemWorkHours> workHours = new List<ReportItemWorkHours>();
 
 
@@ -28,13 +33,16 @@ namespace EmployeeGates
             {
                 var reportItemWorkHours = new ReportItemWorkHours();
 
-                TimeSpan lunchTime  = _eventRepository.GetEventTime(1);
-                TimeSpan smokeTime  = _eventRepository.GetEventTime(2);
-                TimeSpan toiletTime = _eventRepository.GetEventTime(3);
+                TimeSpan lunchTime  = _eventRepository.GetEventTime(1) * _eventRepository.LunchAmmount();
+                TimeSpan smokeTime  = _eventRepository.GetEventTime(2) * _eventRepository.SmokeAmmount();
+                TimeSpan toiletTime = _eventRepository.GetEventTime(3) * _eventRepository.ToiletAmmount();
 
-                TimeSpan workTime = new TimeSpan(9, 0, 0);
+                TimeSpan workTime = new TimeSpan(9, 0, 0) - lunchTime - smokeTime - toiletTime;
                 reportItemWorkHours.Name = employee.Name;
                 reportItemWorkHours.WorkTime = workTime;
+                reportItemWorkHours.TimeSpentLunch = lunchTime;
+                reportItemWorkHours.TimeSpentSmoking = smokeTime;
+                reportItemWorkHours.TimeSpentToilet = toiletTime;
                 workHours.Add(reportItemWorkHours);
             }
             return workHours;

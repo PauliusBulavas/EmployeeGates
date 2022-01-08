@@ -1253,6 +1253,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "EmployeeGates/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/EmployeeGates.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeeGates.dll": {}
+        }
       }
     }
   },
@@ -4942,10 +4952,16 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "EmployeeGates/1.0.0": {
+      "type": "project",
+      "path": "../EmployeeGates/EmployeeGates.csproj",
+      "msbuildProject": "../EmployeeGates/EmployeeGates.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "EmployeeGates >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "NUnit >= 3.13.1",
       "NUnit3TestAdapter >= 3.17.0",
@@ -4983,7 +4999,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\pauli\\Documents\\GitHub\\EmployeeGates\\EmployeeGates\\EmployeeGates.csproj": {
+              "projectPath": "C:\\Users\\pauli\\Documents\\GitHub\\EmployeeGates\\EmployeeGates\\EmployeeGates.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
